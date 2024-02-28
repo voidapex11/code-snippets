@@ -2,5 +2,17 @@ imurl = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAw
 const images = document.querySelectorAll('img');
 
 for (const image of images) {
-  image.src = imurl;
+  // Set the new image source or alt attribute if it's currently empty
+  if (!image.src.endsWith('.jpg') && !image.src.endsWith('.png') && !image.src.endsWith('.gif')) {
+    if (!image.alt) {
+      image.alt = iurl;
+    }
+  } else {
+    // Set the new image source only if it's initially an image (not a placeholder)
+    if (image.src.endsWith('.jpg') || image.src.endsWith('.png') || image.src.endsWith('.gif')) {
+      image.src = iurl;
+    }
+  }
 }
+
+console.log('Done!');
