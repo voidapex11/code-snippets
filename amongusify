@@ -1,5 +1,8 @@
+console.log('START');
+
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
-imurl = 'i.imgur.com/gI0Y5MX.png';
+imurl = 'https://i.ibb.co/5BHLvbV/amongus.png';
+x = 0
 while (true) {
 
 const elements = document.querySelectorAll('a, img');
@@ -38,8 +41,12 @@ for (const picture of pictures) {
 }
 
 
-
+if (x == 10) {
+console.clear()
+x = 0
+}
+x = x + 1
 
 await sleep(1000)
 }
-console.log('Done!');
+
