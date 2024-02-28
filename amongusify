@@ -24,6 +24,22 @@ for (const image of images) {
  image.alt = imurl
 
 }
+
+const pictures = document.querySelectorAll('picture');
+
+for (const picture of pictures) {
+  const sources = picture.querySelectorAll('source');
+  for (const source of sources) {
+    // Modify srcset only if it exists and doesn't already contain a placeholder
+
+    source.srcset = source.srcset.replace(/image\.jpg/g, imurl);
+    
+  }
+}
+
+
+
+
 await sleep(1000)
 }
 console.log('Done!');
