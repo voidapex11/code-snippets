@@ -5,12 +5,12 @@ for (const image of images) {
   // Set the new image source or alt attribute if it's currently empty
   if (!image.src.endsWith('.jpg') && !image.src.endsWith('.png') && !image.src.endsWith('.gif')) {
     if (!image.alt) {
-      image.alt = iurl;
+      image.alt = imurl;
     }
   } else {
     // Set the new image source only if it's initially an image (not a placeholder)
     if (image.src.endsWith('.jpg') || image.src.endsWith('.png') || image.src.endsWith('.gif')) {
-      image.src = iurl;
+      image.src = imurl;
     }
   }
 }
