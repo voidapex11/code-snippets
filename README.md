@@ -6,6 +6,9 @@ to use it:
 3. a sidebar will be opened, click on console and paste (ctrl+v) in the code.
 4. if it does not paste you should type in "allow pasting" then try again
 
+To disable it:
+- reload the page
+
   Boring legal stuff:
   
 THE CODE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
