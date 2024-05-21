@@ -1,10 +1,14 @@
 import logging
 
-FORMAT = '%(asctime)s %(name)s %(levelname)s:\n\t%(message)s\n'
+FORMAT = '%(asctime)s %(name)s %(levelname)s:\n\t%(message)s\n'# logging format
 logging.basicConfig(
     format=FORMAT,
-    level=logging.INFO,
+    level=logging.INFO,# set to DEBUG to show debug mesages
+    handlers=[
+        logging.FileHandler("app.log"),# writes to file and console
+        logging.StreamHandler()
+    ]
 )
 
-#example context:
-logger = logging.getLogger('')
+# example context:
+#logger = logging.getLogger('')
