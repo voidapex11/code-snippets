@@ -34,7 +34,7 @@ except:
 data = []
 count = args.count
 for i in range(count):
-  data.append(random.randint(1, 9))
+  data.append(random.randint(1, max))
 
 print(data)
 
