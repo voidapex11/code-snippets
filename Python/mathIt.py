@@ -1,6 +1,4 @@
 import argparse
-import sys
-
 
 parser = argparse.ArgumentParser(
     prog="CalcIt",
@@ -27,7 +25,9 @@ ans=calcIt(args.equation)
 match isinstance(ans,tuple):
   case True:
     print(ans[0],ans[1])
+    break
   case False:
     print(ans)
+    break
   case _:
-    print("wtf")
+    print("wtf (error)") # ;)
