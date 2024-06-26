@@ -1,4 +1,5 @@
 import argparse
+import math
 
 parser = argparse.ArgumentParser(
     prog="CalcIt",
@@ -16,7 +17,7 @@ args = parser.parse_args()
 
 def calcIt(data:str):
   try:
-    data=eval(data,{}, {})
+    data=eval(data,{"math": math}, {})
     return data
   except Exception as e:
     return "ERROR:",e
