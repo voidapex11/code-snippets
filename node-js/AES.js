@@ -34,3 +34,6 @@ function example(){
 }
 
 //example()
+
+module.exports = { AESCipher }
+
