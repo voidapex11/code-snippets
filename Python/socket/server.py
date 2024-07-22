@@ -8,8 +8,6 @@ import traceback
 import libserver
 
 from logger import logging
-from sqlAlchemy import sqliteConnection, cursor
-from AES import encrypt, decrypt
 
 logger = logging.getLogger("client")
 

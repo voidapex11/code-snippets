@@ -5,7 +5,8 @@ cursor = sqliteConnection.cursor()
 
 def example():
   # run query
-  data=cursor.execute("SELECT * FROM users;").fetchall()
+  query=cursor.execute("SELECT * FROM users;")
+  data=query.fetchall()
   
   cursor.execute("INSERT INTO users (name, age) VALUES ('John', '23');")
   # save changes
