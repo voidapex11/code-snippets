@@ -11,7 +11,7 @@ logging.basicConfig(
       logging.FileHandler("logs/"+datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ".log",),  # writes to file and console
       logging.StreamHandler()
   ],
-  format="[%(asctime)s] %(name)s-%(levelname)s: [%(filename)s:%(lineno)s - %(funcName)s()] : %(message)s",
+  format="[%(asctime)s] %(name)s-%(levelname)s: [%(filename)s:%(lineno)s - %(funcName)s()]:\n%(message)s",
   datefmt="%Y-%m-%d %H:%M:%S",
 )
 
