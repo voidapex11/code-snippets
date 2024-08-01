@@ -1,4 +1,4 @@
-We are using ant
+I are using ant
 
 build the jar
 ```markup
@@ -11,3 +11,17 @@ run the jar
 java -jar build/jar/program.jar
 
 ```
+
+if you have any trouble with this code the file path is
+
+build
+ ├classes
+ | └voidapex11
+ |   └compiled files (.class)
+ |
+ ├jar
+ | └the .jar
+ |
+ └src
+    └voidapex11
+      └the .java files
