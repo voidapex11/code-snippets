@@ -11,8 +11,6 @@ parser = argparse.ArgumentParser(
     epilog="Thanks for using %(prog)s! :)",
 )
 
-
-
 parser.add_argument(
   "count", 
   type=int
@@ -38,6 +36,7 @@ for i in range(count):
 
 print(data)
 
+# this acutualy does the sorting
 for i in range(len(data)):
   for j in range(len(data)):
     if data[i] < data[j]:
