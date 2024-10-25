@@ -8,5 +8,5 @@ it includes python code samples, node js code, java files, and js console tools 
 | description | link |
 | ----------- | ---- |
 | handy page  | https://www.w3.org/TR/xml-entity-names/025.html |
-| new tab for those obscure error messages | <a href="placeholder.com" target="_blank">New tab</a> |
+| new tab for those obscure error messages | <a href="chrome://newtab" target="_blank">New tab</a> |
 | w3schools | https://www.w3schools.com/ |
