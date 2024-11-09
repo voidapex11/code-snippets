@@ -1,5 +1,12 @@
-This is a repo of Code that I use frequently across multiple languages.
+# Code snippets
+This is a repo of Code that I use frequently across multiple languages. As for the name, what do you even call a repostitory like this anyway???
 
-it includes python code samples, node js code, java files, and js console tools
+## About
+it includes python code samples, node js code, java files, and js console tools (which can be used a *little* like extensions).
 
-handy page https://www.w3.org/TR/xml-entity-names/025.html
+## links
+| description | link |
+| ----------- | ---- |
+| handy page  | https://www.w3.org/TR/xml-entity-names/025.html |
+| new tab for those obscure error messages | <a href="chrome://newtab" target="_blank">New tab</a> |
+| w3schools | https://www.w3schools.com/ |
