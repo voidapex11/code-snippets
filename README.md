@@ -4,6 +4,11 @@ This is a repo of Code that I use frequently across multiple languages. As for t
 ## About
 it includes python code samples, node js code, java files, and js console tools (which can be used a *little* like extensions).
 
+## sbxl's mods
+put this before mod names in /sandboxels mods
+https://voidapex11.github.io/code-snippets/sandboxels%20mods/
+
+
 ## links
 | description | link |
 | ----------- | ---- |
