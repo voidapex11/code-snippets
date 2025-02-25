@@ -32,6 +32,14 @@ curl -s https://azlux.fr/repo.gpg.key | gpg --dearmor | sudo tee /usr/share/keyr
 sudo apt update
 sudo apt install gping
 
+# install node js
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+
+nvm install node
+
+# install tldr
+npm install -g tldr
+
 # curses for pinentry in gpg
 echo you want curses pinentry not the default
 sleep 2
