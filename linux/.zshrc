@@ -243,12 +243,14 @@ if [ -x /usr/bin/dircolors ]; then
     zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 fi
 
-# some more ls aliases
+# some more  aliases
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 alias lh='ls -lh'
 alias lah='ls -lah'
+alias bw='npx bw'
+alias bat='batcat'
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
@@ -264,7 +266,7 @@ fi
 
 
 
-
+export PATH=$PATH:/opt/gradle/gradle-8.12/bin
 
 # The following lines were added by compinstall
 
@@ -274,3 +276,21 @@ zstyle :compinstall filename '/home/voidapex11/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export LD_LIBRARY_PATH=/usr/java/jdk-21.0.5+11/lib:$LD_LIBRARY_PATH
+
+fpath=(/home/pi/.zsh/gradle-completion $fpath)
+export DOTNET_ROOT=/home/pi/dotnet
+export PATH=/home/pi/.nvm/versions/node/v22.12.0/bin:/home/pi/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/opt/gradle/gradle-8.12/bin:/home/pi/dotnet:/home/pi/dotnet
+
+# Created by `pipx` on 2025-01-08 12:34:39
+export PATH="$PATH:/home/pi/.local/bin"
+export DOTNET_ROOT=$HOME/.dotnet
+
+export PATH="$PATH:$HOME/pycharm-2024.3.1.1/bin:/opt/RustRover-2024.3.2/bin:/opt/PhpStorm-243.22562.233/bin:$HOME/idea-IU-243.23654.117/bin"
+
+export PATH="$HOME/.cargo/bin:$PATH"
+

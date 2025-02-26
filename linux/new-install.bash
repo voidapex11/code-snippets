@@ -8,7 +8,7 @@ sudo apt-get update
 sudo apt-get upgrade
 
 # apt installs
-sudo apt install vim htop cmatrix zsh git net-tools zip unzip ufw python3 python3-pip tmux gnupg -y
+sudo apt install vim htop cmatrix zsh git net-tools zip unzip ufw python3 python3-pip tmux gnupg ncdu bat -y
 
 # install my zshrc ( as its my install scrip)
 wget https://github.com/voidapex11/code-snippets/blob/main/linux/.zshrc
@@ -39,6 +39,15 @@ nvm install node
 
 # install tldr
 npm install -g tldr
+
+# install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+. "$HOME/.cargo/env" # configure path
+
+# install dust and dysk
+cargo install du-dust
+cargo install --locked dysk
 
 # curses for pinentry in gpg
 echo you want curses pinentry not the default
