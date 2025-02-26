@@ -11,7 +11,7 @@ sudo apt-get upgrade
 sudo apt install vim htop cmatrix zsh git net-tools zip unzip ufw python3 python3-pip tmux gnupg ncdu bat -y
 
 # install my zshrc ( as its my install scrip)
-wget https://github.com/voidapex11/code-snippets/blob/main/linux/.zshrc
+wget https://raw.githubusercontent.com/voidapex11/code-snippets/refs/heads/main/linux/.zshrc
 
 # set shell to zsh
 chsh -s $(which zsh)
