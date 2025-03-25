@@ -251,6 +251,7 @@ alias lh='ls -lh'
 alias lah='ls -lah'
 alias bw='npx bw'
 alias bat='batcat'
+alias nvim='docker exec -it nvchad nvim -c "cd $(pwd)"'
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then

@@ -49,6 +49,35 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cargo install du-dust
 cargo install --locked dysk
 
+# docker
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+sudo docker run hello-world
+
+# neovim
+
+docker run -d --name nvchad \
+  -w "$HOME" \
+  -v "$HOME:$HOME" \
+  alpine:latest sh -c "\
+    apk add git nodejs neovim ripgrep build-base wget --update && \
+    git clone https://github.com/NvChad/starter ~/.config/nvim && \
+    sleep infinity"
+
+
+
 # curses for pinentry in gpg
 echo you want curses pinentry not the default
 sleep 2
