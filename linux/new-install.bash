@@ -68,7 +68,7 @@ sudo docker run hello-world
 
 # neovim
 
-docker run -d --name nvchad \
+docker run -d --restart unless-stopped --name nvchad \
   -w "$HOME" \
   -v "$HOME:$HOME" \
   alpine:latest sh -c "\
