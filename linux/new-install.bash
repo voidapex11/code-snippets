@@ -73,8 +73,8 @@ docker run -d --restart unless-stopped --name nvchad \
   -v "$HOME:$HOME" \
   alpine:latest sh -c "\
     apk add git nodejs neovim ripgrep build-base wget --update && \
-    git clone https://github.com/NvChad/starter ~/.config/nvim && \
-    sleep infinity"
+    git clone https://github.com/NvChad/starter ~/.config/nvim ; \
+    tail -f /dev/null"
 
 
 
