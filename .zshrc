@@ -243,8 +243,6 @@ if [ -x /usr/bin/dircolors ]; then
     zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 fi
 
-eval "$(jump shell zsh)"
-
 # some more  aliases
 alias ll='ls -l'
 alias la='ls -A'
