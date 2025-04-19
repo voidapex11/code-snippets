@@ -8,7 +8,7 @@ sudo apt-get update
 sudo apt-get upgrade
 
 # apt installs
-sudo apt install vim htop cmatrix zsh git net-tools zip unzip ufw python3 python3-pip tmux gnupg ncdu bat -y
+sudo apt install vim htop cmatrix zsh git net-tools zip unzip ufw python3 python3-pip tmux gnupg ncdu bat rlwrap -y
 
 # install my zshrc ( as its my install scrip)
 wget https://raw.githubusercontent.com/voidapex11/code-snippets/refs/heads/main/linux/.zshrc
@@ -24,6 +24,9 @@ VERSION=$(curl -s "https://api.github.com/repos/$REPO/releases/latest" | grep -o
 wget https://github.com/$REPO/releases/download/$VERSION/fastfetch-linux-aarch64.deb
 sudo dpkg -i fastfetch-linux-aarch64.deb
 rm fastfetch-linux-aarch64.deb
+
+# install cheat.sh
+curl -s https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cheat && sudo chmod +x /usr/local/bin/cheat
 
 # install gping
 echo 'deb [signed-by=/usr/share/keyrings/azlux.gpg] https://packages.azlux.fr/debian/ bookworm main' | sudo tee /etc/apt/sources.list.d/azlux.list
