@@ -243,8 +243,6 @@ if [ -x /usr/bin/dircolors ]; then
     zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 fi
 
-eval "$(jump shell zsh)"
-
 # some more  aliases
 alias ll='ls -l'
 alias la='ls -A'
@@ -255,6 +253,10 @@ alias bw='npx bw'
 alias bat='batcat'
 alias nvim='docker exec -it --workdir $(pwd) nvchad nvim -c "cd $(pwd)"'
 alias less='less -R'
+alias fd='fdfind'
+export PATH="$PATH:/snap/bin"
+
+eval "$(jump shell zsh)"
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
@@ -288,7 +290,7 @@ export LD_LIBRARY_PATH=/usr/java/jdk-21.0.5+11/lib:$LD_LIBRARY_PATH
 
 fpath=(/home/pi/.zsh/gradle-completion $fpath)
 export DOTNET_ROOT=/home/pi/dotnet
-export PATH=/home/pi/.nvm/versions/node/v22.12.0/bin:/home/pi/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/opt/gradle/gradle-8.12/bin:/home/pi/dotnet:/home/pi/dotnet
+export PATH=$PATH:$HOME/.nvm/versions/node/v22.12.0/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/opt/gradle/gradle-8.12/bin:$HOME/dotnet:$HOME/dotnet
 
 # Created by `pipx` on 2025-01-08 12:34:39
 export PATH="$PATH:/home/pi/.local/bin"
