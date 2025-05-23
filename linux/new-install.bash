@@ -49,8 +49,10 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 . "$HOME/.cargo/env" # configure path
 
 # install dust and dysk
-cargo install du-dust
-cargo install --locked dysk
+cargo install cargo-binstall
+cargo binstall du-dust
+cargo binstall --locked dysk
+cargo binstall eza
 
 # docker
 sudo apt-get install ca-certificates curl
