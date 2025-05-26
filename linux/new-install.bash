@@ -3,6 +3,8 @@
 # |
 # bash shabang (for making it executable)
 
+set -x
+
 # update the packages
 sudo apt-get update
 sudo apt-get upgrade

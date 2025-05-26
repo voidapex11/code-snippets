@@ -1,2 +1,5 @@
+set -x
 cp ~/code-snippets/linux/.zshrc ~/.zshrc
-source .zshrc
+#cd ~
+#source .zshrc
+#cd -

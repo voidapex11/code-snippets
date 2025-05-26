@@ -1,3 +1,5 @@
+set -x
+
 # dependancys
 sudo apt-get install git cmake
 
