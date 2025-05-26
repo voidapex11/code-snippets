@@ -1,1 +1,2 @@
-sudo apt-get install git cmake
+cp ~/code-snippets/linux/.zshrc ~/.zshrc
+source .zshrc
