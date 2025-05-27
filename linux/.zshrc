@@ -246,7 +246,7 @@ fi
 # some more  aliases
 alias ll='ls -l'
 alias la='ls -A'
-alias l='ls -CF'
+#alias l='ls -CF'
 alias lh='ls -lh'
 alias lah='ls -lah'
 alias bw='npx bw'
@@ -254,7 +254,7 @@ alias bat='batcat'
 # alias nvim='docker exec -it --workdir $(pwd) nvchad nvim -c "cd $(pwd)"'
 alias less='less -R'
 alias fd='fdfind'
-alias eza='eza --icons=always'
+alias eza='eza --icons'
 export PATH="$PATH:/snap/bin"
 alias ls='eza'
 eval "$(jump shell zsh)"
