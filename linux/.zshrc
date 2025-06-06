@@ -254,7 +254,7 @@ alias bat='batcat'
 # alias nvim='docker exec -it --workdir $(pwd) nvchad nvim -c "cd $(pwd)"'
 alias less='less -R'
 alias fd='fdfind'
-alias eza='eza --icons'
+alias eza='eza --icons always'
 export PATH="$PATH:/snap/bin"
 alias ls='eza'
 eval "$(jump shell zsh)"
