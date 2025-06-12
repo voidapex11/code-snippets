@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 
 
 
@@ -289,15 +296,20 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export LD_LIBRARY_PATH=/usr/java/jdk-21.0.5+11/lib:$LD_LIBRARY_PATH
 
-fpath=(/home/pi/.zsh/gradle-completion $fpath)
-export DOTNET_ROOT=/home/pi/dotnet
+fpath=($HOME/.zsh/gradle-completion $fpath)
+export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/.nvm/versions/node/v22.12.0/bin:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games:/opt/gradle/gradle-8.12/bin:$HOME/dotnet:$HOME/dotnet
 
 # Created by `pipx` on 2025-01-08 12:34:39
-export PATH="$PATH:/home/pi/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 export DOTNET_ROOT=$HOME/.dotnet
 
 export PATH="$PATH:$HOME/pycharm-2024.3.1.1/bin:/opt/RustRover-2024.3.2/bin:/opt/PhpStorm-243.22562.233/bin:$HOME/idea-IU-243.23654.117/bin"
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
