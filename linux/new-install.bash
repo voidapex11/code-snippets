@@ -33,7 +33,7 @@ curl -s https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cheat && sudo chmod +x 
 # install gping
 echo 'deb [signed-by=/usr/share/keyrings/azlux.gpg] https://packages.azlux.fr/debian/ bookworm main' | sudo tee /etc/apt/sources.list.d/azlux.list
 sudo apt install gpg
-curl -s https://azlux.fr/repo.gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/azlux.gpg > /dev/null
+curl -s https://azlux.fr/repo.gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/azlux.gpg >/dev/null
 sudo apt update
 sudo apt install gping
 
@@ -65,8 +65,8 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
 # Add the repository to Apt sources:
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |
+  sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
 sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
@@ -83,9 +83,9 @@ docker run -d --restart unless-stopped --name nvchad \
     git clone https://github.com/NvChad/starter ~/.config/nvim ; \
     tail -f /dev/null"
 
-
-
 # curses for pinentry in gpg
 echo you want curses pinentry not the default
 sleep 2
 sudo update-alternatives --config pinentry
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k

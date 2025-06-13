@@ -309,9 +309,10 @@ export PATH="$PATH:$HOME/pycharm-2024.3.1.1/bin:/opt/RustRover-2024.3.2/bin:/opt
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
+fastfetch
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 source ~/powerlevel10k/powerlevel10k.zsh-theme
-
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-fastfetch
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
