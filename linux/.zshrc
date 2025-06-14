@@ -265,7 +265,7 @@ alias fd='fdfind'
 alias eza='eza --icons'
 export PATH="$PATH:/snap/bin"
 alias ls='eza'
-eval "$(jump shell zsh)"
+#eval "$(jump shell zsh)"
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
