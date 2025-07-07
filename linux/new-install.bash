@@ -10,7 +10,7 @@ sudo apt-get update
 sudo apt-get upgrade
 
 # apt installs
-sudo apt install vim htop cmatrix zsh git net-tools zip unzip ufw python3 python3-pip tmux gnupg ncdu bat rlwrap -y
+sudo apt install zsh-autosuggestions command-not-found nala btop vim htop cmatrix zsh git net-tools zip unzip ufw python3 python3-pip tmux gnupg ncdu bat rlwrap -y
 
 # install my zshrc ( as its my install scrip)
 wget https://raw.githubusercontent.com/voidapex11/code-snippets/refs/heads/main/linux/.zshrc
