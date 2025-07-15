@@ -265,7 +265,8 @@ alias fd='fdfind'
 alias eza='eza --icons'
 export PATH="$PATH:/snap/bin"
 alias ls='eza'
-which jump && eval "$(jump shell zsh)"
+#alias apt='nala'
+which jump && eval "$(jump shell zsh)" &
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
@@ -284,8 +285,8 @@ fi
 export PATH=$PATH:/opt/gradle/gradle-8.12/bin
 
 # The following lines were added by compinstall
-
 zstyle ':completion:*' completer _complete _ignored
+
 zstyle :compinstall filename '/home/voidapex11/.zshrc'
 
 autoload -Uz compinit
@@ -309,7 +310,6 @@ export PATH="$PATH:$HOME/pycharm-2024.3.1.1/bin:/opt/RustRover-2024.3.2/bin:/opt
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
-fastfetch
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
@@ -332,3 +332,5 @@ eval "$(pyenv init - bash)"
 # the following to ~/.bashrc:
 
 eval "$(pyenv virtualenv-init -)"
+
+fastfetch
