@@ -14,6 +14,8 @@ sudo apt install zsh-autosuggestions command-not-found nala btop vim htop cmatri
 
 # install my zshrc ( as its my install scrip)
 wget https://raw.githubusercontent.com/voidapex11/code-snippets/refs/heads/main/linux/.zshrc
+wget https://raw.githubusercontent.com/voidapex11/code-snippets/refs/heads/main/linux/.p10k.zsh
+wget https://raw.githubusercontent.com/voidapex11/code-snippets/refs/heads/main/linux/.tmux.conf
 
 # set shell to zsh
 chsh -s $(which zsh)
