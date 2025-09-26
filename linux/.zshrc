@@ -1,14 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-#
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-
-
-
 # ~/.zshrc file for zsh interactive shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
 
@@ -287,7 +276,7 @@ export PATH=$PATH:/opt/gradle/gradle-8.12/bin
 # The following lines were added by compinstall
 zstyle ':completion:*' completer _complete _ignored
 
-zstyle :compinstall filename '/home/voidapex11/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -310,13 +299,6 @@ export PATH="$PATH:$HOME/pycharm-2024.3.1.1/bin:/opt/RustRover-2024.3.2/bin:/opt
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-
 # Load pyenv automatically by appending
 # the following to
 # ~/.bash_profile if it exists, otherwise ~/.profile (for login shells)
@@ -326,11 +308,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - bash)"
 
-# Restart your shell for the changes to take effect.
-
-# Load pyenv-virtualenv automatically by adding
-# the following to ~/.bashrc:
-
 eval "$(pyenv virtualenv-init -)"
+eval "$(starship init zsh)"
 
-fastfetch
+# fastfetch

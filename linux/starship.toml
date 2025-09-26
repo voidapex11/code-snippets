@@ -1,0 +1,122 @@
+format = """
+$git_branch\
+$git_status\
+$python\
+$nodejs\
+$c\
+$cpp\
+$rust\
+$java\
+$golang\
+$docker_context\
+$kubernetes
+$os [$username](fg:blue)[@](fg:blue)[$hostname](fg:blue)
+$directory$character
+"""
+
+right_format = """$battery $time"""
+
+#"$schema" = 'https://starship.rs/config-schema.json'
+
+[battery]
+full_symbol = "• "
+charging_symbol = "⇡ "
+discharging_symbol = "⇣ "
+disabled = false
+
+[[battery.display]]
+threshold = 100
+
+[time]
+style = "#939594"
+format = "[$time]($style)"
+disabled = false
+
+[username]
+show_always = true
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style)"
+
+[c]
+format = "[$symbol($version )]($style)"
+symbol = " "
+
+[directory]
+read_only = " "
+
+[docker_context]
+symbol = " "
+format = "[$symbol$context]($style)"
+
+[elm]
+symbol = " "
+
+[golang]
+symbol = " "
+format = "[$symbol($version )]($style)"
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+format = "[$symbol($version )]($style)"
+
+[memory_usage]
+symbol = " "
+
+[nodejs]
+format = "[$symbol($version )]($style)"
+symbol = " "
+
+[os]
+disabled = false
+
+[os.symbols]
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "﯑ "
+Gentoo = " "
+HardenedBSD = "ﲊ "
+Illumos = " "
+Linux = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = " "
+openSUSE = " "
+OracleLinux = " "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = " "
+Solus = "ﴱ "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = " "
+
+[package]
+symbol = " "
+format = "[$symbol($version )]($style)"
+
+[python]
+symbol = " "
+format = "[$symbol($version )]($style)"

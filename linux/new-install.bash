@@ -17,8 +17,10 @@ sudo nala install zsh-autosuggestions command-not-found btop vim htop cmatrix zs
 
 # install my zshrc ( as its my install scrip)
 wget https://raw.githubusercontent.com/voidapex11/code-snippets/refs/heads/main/linux/.zshrc
-wget https://raw.githubusercontent.com/voidapex11/code-snippets/refs/heads/main/linux/.p10k.zsh
+#wget https://raw.githubusercontent.com/voidapex11/code-snippets/refs/heads/main/linux/.p10k.zsh
 wget https://raw.githubusercontent.com/voidapex11/code-snippets/refs/heads/main/linux/.tmux.conf
+mkdir ~/.config -p
+wget https://raw.githubusercontent.com/voidapex11/code-snippets/refs/heads/main/linux/starship.toml -O ~/.config/starship.toml
 
 # set shell to zsh
 chsh -s $(which zsh)
@@ -87,19 +89,19 @@ sudo nala install docker-ce docker-ce-cli containerd.io docker-buildx-plugin doc
 
 sudo docker run hello-world
 
-# neovim
-
-docker run -d --restart unless-stopped --name nvchad \
-  -w "$HOME" \
-  -v "$HOME:$HOME" \
-  alpine:latest sh -c "\
-    apk add git nodejs neovim ripgrep build-base wget --update && \
-    git clone https://github.com/NvChad/starter ~/.config/nvim ; \
-    tail -f /dev/null"
-
 # curses for pinentry in gpg
 echo you want curses pinentry not the default
 sleep 2
 sudo update-alternatives --config pinentry
 
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+# starship
+curl -sS https://starship.rs/install.sh | sh
+
+# lazygit
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_$(ARCH).tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit -D -t /usr/local/bin/
+
+# lazydocker
+curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
