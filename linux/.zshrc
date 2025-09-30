@@ -255,7 +255,6 @@ alias eza='eza --icons'
 export PATH="$PATH:/snap/bin"
 alias ls='eza'
 #alias apt='nala'
-which jump && eval "$(jump shell zsh)" &
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
@@ -304,11 +303,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # ~/.bash_profile if it exists, otherwise ~/.profile (for login shells)
 # and ~/.bashrc (for interactive shells) :
 
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - bash)"
-
-eval "$(pyenv virtualenv-init -)"
 eval "$(starship init zsh)"
+
+eval "$(zoxide init zsh)"
 
 # fastfetch
